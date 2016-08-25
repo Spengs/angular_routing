@@ -35,11 +35,11 @@ myApp.controller('dvaController', ["$scope", function($scope){
 }]);
 
 myApp.controller('lucioController', ["$scope", function($scope){
-  console.log("Dogs rule!");
+  console.log("lucio");
 
 }]);
 
 myApp.controller('pharahController', ["$scope", function($scope){
-  console.log("Lizards are toxic!");
+  console.log("pharah");
 
 }]);
