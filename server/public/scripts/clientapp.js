@@ -2,35 +2,44 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.
-    when('/cats', {
-      templateUrl: '/views/partials/cats.html',
-      controller: 'catController'
+    when('/home', {
+      templateUrl: '/views/partials/home.html',
+      controller: 'HomeController'
     }).
-    when('/dogs', {
-      templateUrl: '/views/partials/dogs.html',
-      controller: 'dogController'
+    when('/dva', {
+      templateUrl: '/views/partials/dva.html',
+      controller: 'dvaController'
     }).
-    when('/lizards', {
-      templateUrl: '/views/partials/lizards.html',
-      controller: 'lizardController'
+    when('/lucio', {
+      templateUrl: '/views/partials/lucio.html',
+      controller: 'lucioController'
+    }).
+    when('/pharah', {
+      templateUrl: '/views/partials/pharah.html',
+      controller: 'pharahController'
     }).
     otherwise({
-      redirectTo: '/cats'
+      redirectTo: '/home'
     });
 }]);
 
-
-myApp.controller('catController', ["$scope", function($scope){
-  console.log("Super Cats!");
+myApp.controller('HomeController', ["$scope", function($scope){
+  console.log("home")
 
 }]);
 
-myApp.controller('dogController', ["$scope", function($scope){
+
+myApp.controller('dvaController', ["$scope", function($scope){
+  console.log("dva")
+
+}]);
+
+myApp.controller('lucioController', ["$scope", function($scope){
   console.log("Dogs rule!");
 
 }]);
 
-myApp.controller('lizardController', ["$scope", function($scope){
+myApp.controller('pharahController', ["$scope", function($scope){
   console.log("Lizards are toxic!");
 
 }]);
